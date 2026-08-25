@@ -1,12 +1,1 @@
-Task: Disable automation tests for the old version in the CI pipeline
 
-Context: The old version of this module is no longer being actively developed (no code changes are being made to it), and its automation tests are slowing down the CI pipeline (~10 minutes of the full run). We've agreed to deactivate these tests in the pipeline for now — this is a temporary measure, not a removal. The tests and related CI config will be fully ripped out later via separate follow-up tickets, so don't delete anything yet.
-
-Before making any changes, please:
-
-Investigate the CI pipeline configuration and identify exactly which test suite(s)/stage(s) correspond to the old version's automation tests.
-Advise on the best way to disable them without deleting them — e.g. commenting out a pipeline stage, adding a skip/exclude tag, using a conditional flag, or an equivalent mechanism appropriate to the CI tool in use.
-Flag any risks or side effects (e.g. shared config with tests still in use, coverage reporting dependencies, other jobs that reference this stage).
-Wait for confirmation before applying the change.
-
-Once I confirm your proposed approach, go ahead and make the change.
